@@ -1,0 +1,165 @@
+_type: export
+__export_format: 4
+__export_date: 2021-07-05T01:42:01.011Z
+__export_source: insomnia.desktop.app:v2021.4.0
+resources:
+  - _id: req_9052e6e567a546c4a0578a9ac60c0ec1
+    parentId: wrk_8278a423107a445eaf2304f409d532fe
+    modified: 1625448440833
+    created: 1625447675108
+    url: "{{ _.host }}/posts?page=4"
+    name: Index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1625447675108
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_8278a423107a445eaf2304f409d532fe
+    parentId: null
+    modified: 1625447556067
+    created: 1625447556067
+    name: Catalina
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_c19630123f5b4bcea227c8fdbc07b330
+    parentId: wrk_8278a423107a445eaf2304f409d532fe
+    modified: 1625448396583
+    created: 1625447718187
+    url: "{{ _.host }}/posts"
+    name: store
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title":"Teste de post {% hash 'md5', 'hex', '' %}",
+        	"description":"Descrição do post 2 {% hash 'sha1', 'hex', '' %}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_3b2106eb75264126bdb9bf691b814949
+    authentication: {}
+    metaSortKey: -1625447675058
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_77ec10653948444db2b62e21d65bc2b6
+    parentId: wrk_8278a423107a445eaf2304f409d532fe
+    modified: 1625447976635
+    created: 1625447790391
+    url: "{{ _.host }}/posts/1"
+    name: show
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1625447675008
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f54e3d3cbf5f4dbf8f0e3962f1b97a8c
+    parentId: wrk_8278a423107a445eaf2304f409d532fe
+    modified: 1625448048885
+    created: 1625447994702
+    url: "{{ _.host }}/posts/1"
+    name: update
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title":"Teste de post alterada",
+        	"description":"Descrição do post alterada"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a9850a9c6a8441a7876a793974bd61a5
+    authentication: {}
+    metaSortKey: -1625447674958
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_17edd54756824110989a1ea5b5ad6ee5
+    parentId: wrk_8278a423107a445eaf2304f409d532fe
+    modified: 1625448555442
+    created: 1625448286743
+    url: "{{ _.host }}/posts/14"
+    name: destroy
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1625447674908
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_46fa31ff77d7103a17a9ac99980becf7e78cf9d1
+    parentId: wrk_8278a423107a445eaf2304f409d532fe
+    modified: 1625447652053
+    created: 1625447556157
+    name: Base Environment
+    data:
+      host: http://localhost:3333
+    dataPropertyOrder:
+      "&":
+        - host
+    color: null
+    isPrivate: false
+    metaSortKey: 1625447556157
+    _type: environment
+  - _id: jar_46fa31ff77d7103a17a9ac99980becf7e78cf9d1
+    parentId: wrk_8278a423107a445eaf2304f409d532fe
+    modified: 1625447556161
+    created: 1625447556161
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_cd8cd55ae8eb4e1ea1ed24a531ee9cc6
+    parentId: wrk_8278a423107a445eaf2304f409d532fe
+    modified: 1625447556076
+    created: 1625447556076
+    fileName: Catalina
+    contents: ""
+    contentType: yaml
+    _type: api_spec
